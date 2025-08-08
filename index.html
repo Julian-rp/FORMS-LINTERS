@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario avanzado</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container"> 
+    <h1>FROMULARIO SENA V1</h1>
+        <h3>GRACIAS POR DEJAR SUS DATOS</h3>
+    
+      <div class="form-group">
+        <label for="nombres">Name: </label>
+        <input type="text" 
+          id="nombres" 
+          name="nombres" 
+          required
+          autofocus
+          placeholder="Please enter your name"
+          pattern="[A-Za-zÁÉÍÓÚáéíóúÑñÜü ]{3,40}" />
+        <div class="mensaje-error" id="errorNombres"></div>
+        <div class="mensaje-exito" id="exitoNombres"></div>
+      </div>
+      
+      <!-- Email de validación -->
+      <div class="form-group">
+        <label for="correo">Email </label>
+        <input 
+          type="email" 
+          id="correo" 
+          name="correo" 
+          required
+          placeholder="Please enter your Email"
+          pattern="^[\w\-\.]+@([\w\-]+\.)+[\w\-]{2,50}$"
+          oncopy="return false"
+          onpaste="return false"/>
+        <div class="mensaje-error" id="errorCorreo"></div>
+        <div class="mensaje-exito" id="exitoCorreo"></div>
+      </div>
+
+    <div class="form-group">
+        <label for="nombres">Age: </label>
+        <input type="text" 
+          id="nombres" 
+          name="nombres" 
+          required
+          autofocus
+          placeholder="Please enter your Age"
+          pattern="[A-Za-zÁÉÍÓÚáéíóúÑñÜü ]{3,40}" />
+        <div class="mensaje-error" id="errorNombres"></div>
+        <div class="mensaje-exito" id="exitoNombres"></div>
+      </div>
+   
+      <label for="optionSelect">Choose an option</label>
+        <select id="optionSelect">
+             <option>Select One Option</option>
+             <option>Option 1</option>
+             <option>Option 2</option>
+             <option>Option 3</option>
+        </select>
+        <br><br>
+<div>
+    <label>-Do you plan to buy a new car in the next 5 years?</label>
+           <label><input type="checkbox" name="carPlan" value="yes"> Yes</label>
+          <label><input type="checkbox" name="carPlan" value="no"> No</label>
+          <label><input type="checkbox" name="carPlan" value="maybe"> Maybe</label>
+        </div>
+        <br>
+        <div>
+
+ <label for="">-What type of means of transport do you use?</label>
+  <label><input type="checkbox" name="vehicle" value="car"> Car</label>
+  <label><input type="checkbox" name="vehicle" value="boat"> Boat</label>
+  <label><input type="checkbox" name="vehicle" value="bicycle"> Bicycle</label>
+  <label><input type="checkbox" name="vehicle" value="motorcycle"> Motorcycle</label>
+  <label><input type="checkbox" name="vehicle" value="plane"> Plane</label>
+  <label><input type="checkbox" name="vehicle" value="bike"> Bike</label>
+        </div> <br>
+    
+      <div class="form-group">
+        <label for="comentarios">Any comments suggestions? *</label>
+        <textarea 
+          id="comentarios" 
+          name="comentarios" 
+          rows="4" 
+          maxlength="500"
+          placeholder="Please enter your comments"></textarea>
+        <div class="contador-caracteres">
+           <span id="contadorComentarios">0</span>/500 caracteres
+        </div>
+      </div>
+
+      
+      <button
+        type="submit" 
+        id="btnEnviar"
+        disabled>
+        Enviar Formulario
+      </button>
+    </form>
+
+    <div id="resumenDatos">
+      <h2>Resumen de datos enviados</h2>
+      <div id="contenidoResumen"></div>
+      <button type="button" onclick="reiniciarFormulario()">Reiniciar formulario</button>
+    </div>
+  </div>
+
+  
+
+</body>
+</html>
